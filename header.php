@@ -1,3 +1,39 @@
+
+<?php 
+
+if(isset($_POST["connexion"])){
+
+    $pseudo=$_POST["pseudo"];
+    $pass=$_POST["pass"];
+
+    $sql = "SELECT pseudo,pass FROM user WHERE pseudo='$pseudo'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+
+           if($row["pass"]==$pass){ 
+            session_start();
+            $_SESSION["pseudo"] =$row["pseudo"];
+            $_SESSION["pass"] = $row["pass"];
+            $_SESSION["login"]=1;
+            }
+          }
+    }else{
+        echo ' 
+        <div class="container">
+            <div class="col-md-4">
+                <div class="alert alert-danger alert-dismissible">
+                     <button type="button" class="close" data-dismiss="alert">×</button>
+                   pseudo ou mot de passe inccorecte
+                     <button  type="button" class="btn btn-secondary" data-toggle="modal" data-dismiss="modal" data-target="#login"> réessayer </button>
+                </div>
+            </div>    
+        </div>';
+    }
+}
+
+?>
 <header class="header">
         <div class="container-fluid">
             <div class="row">
@@ -28,8 +64,13 @@
                         </nav>
                         <div class="header__menu__right">
                             <a href="#" class="primary-btn" data-toggle="modal" data-target="#addlink"><i class="fa fa-plus"></i>Ajouter un lien</a>
-                            <button type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#login">LogIn</button>
-                            <a href="#" class="login-btn"data-toggle="modal" data-target="#dashboard"><i class="fa fa-user"></i></a>
+                           <?php 
+                                  if(isset($_SESSION["login"]) && $_SESSION["login"]==1) {
+                                    echo '<a style="color:white;">'. $_SESSION["pseudo"].'</a>' ; 
+                                 } else{?><button type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#login">LogIn</button>
+                                  <?php } ;
+                            ?> 
+                            <a href="#" class="login-btn" data-toggle="modal" data-target="#dashboard"><i class="fa fa-user"></i></a>
                         </div>
                     </div>
                 </div>
@@ -55,8 +96,13 @@
                             </li>
                             <li><a href="#" role="menuitem">A propos</a></li>
                             <li><a href="#" role="menuitem">Contact</a></li> -->
-                            <a href="#" class="primary-btn"><i class="fa fa-plus" data-toggle="modal" data-target="#addlink"></i>Ajouter un lien</a>
-                                <button type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#login">LogIn</button>
+                            <a href="#" class="primary-btn" data-toggle="modal" data-target="#addlink"><i class="fa fa-plus"></i>Ajouter un lien</a>
+                            <?php 
+                            if(isset($_SESSION["login"]) &&$_SESSION["login"]==1) {
+                                echo '<a style="color:white;">'. $_SESSION["pseudo"].'</a>' ; 
+                                 } else{?> <button type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#login">LogIn</button>
+                                  <?php } ;
+                            ?> 
                                 <a href="#" type="button" class="login-btn" data-toggle="modal" data-target="#dashboard" ><i class="fa fa-user"></i></a>
         <!-- 
                         </ul> -->
