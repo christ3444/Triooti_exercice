@@ -146,48 +146,6 @@
         </div>
     </section>
     <!-- Hero Section End -->
-
-    <!-- Categories Section Begin -->
-    <section class="categories spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Annuaire des entreprises </h2>
-                        <p>Trouvez ici tous types d'entreprises dans n'importe quel domaine</p>
-                    </div>
-                    <div class="categories__item__list">
-                        <div class="categories__item">
-                            <img src="img/categories/cat-1.png" alt="">
-                            <h5>Immobilier</h5>
-                            <span>78 Listings</span>
-                        </div>
-                        <div class="categories__item">
-                            <img src="img/categories/cat-2.png" alt="">
-                            <h5>Banque/Assurance</h5>
-                            <span>32 Listings</span>
-                        </div>
-                        <div class="categories__item">
-                            <img src="img/categories/cat-3.png" alt="">
-                            <h5>Commerce</h5>
-                            <span>16 Listings</span>
-                        </div>
-                        <div class="categories__item">
-                            <img src="img/categories/cat-4.png" alt="">
-                            <h5>Agroalimentaire</h5>
-                            <span>55 Listings</span>
-                        </div>
-                        <div class="categories__item">
-                            <img src="img/categories/cat-5.png" alt="">
-                            <h5>BTP/construction</h5>
-                            <span>23 Listings</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Categories Section End -->
     
     <!-- Most Search Section Begin -->
     <section class="most-search spad">
@@ -195,8 +153,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Tous les secteurs d'activité</h2>
-                        <p></p>
+                        <h2>Annuaire des entreprises </h2>
+                        <p>Trouvez ici tous types d'entreprises dans n'importe quel domaine</p>
+                    
                     </div>
                 </div>
             </div>
@@ -354,215 +313,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="img/listing/list-2.jpg">
-                                            <img src="img/listing/list_icon-2.png" alt="">
-                                            <div class="listing__item__pic__tag top_rate">Top Rate</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Shrimp floured and fried</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 1012 Vesper Dr. Columbus,
-                                                        Georgia(GA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="img/listing/list_small_icon-2.png" alt="">
-                                                    <span>Food & Drink</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="img/listing/list-3.jpg">
-                                            <img src="img/listing/list_icon-3.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Sweet and sour pork ribs</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 251 Wiley St. Forks,
-                                                        Washington(WA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="img/listing/list-4.jpg">
-                                            <img src="img/listing/list_icon-4.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Crab fried with tamarind</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 14320 Keenes Mill Rd.
-                                                        Cottondale, Alabama(AL), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="img/listing/list-5.jpg">
-                                            <img src="img/listing/list_icon-5.png" alt="">
-                                            <div class="listing__item__pic__tag hot_deal">Hot Deal</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Tortoise grilled on salt</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="img/listing/list_small_icon-4.png" alt="">
-                                                    <span>Shopping</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="img/listing/list-6.jpg">
-                                            <img src="img/listing/list_icon-6.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Fish cooked with fishsauce</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 2604 E Drachman St. Tucson,
-                                                        Arizona, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="immo" role="tabpanel">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <!-- <div class="listing__item__pic set-bg" data-setbg="img/listing/list-1.jpg">
-                                            <img src="img/listing/list_icon-1.png" alt="">
-                                            <div class="listing__item__pic__tag">Technologieblabla</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div> -->
+                               
                                         <div class="listing__item__text">
                                             <div class="listing__item__text__inside">
                                                 <h5>Immo House </h5>
@@ -653,17 +404,17 @@
         <div class="modal-content">
 
           <!-- Modal Header -->
-          <div class="modal-header">
+          <div class="modal-header" id="addlink_result">
             <h4 class="modal-title" >ajouter une entreprise</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
           <!-- Modal body -->
           <div class="modal-body">
-            <form action="index.php" method="post">
+            <form name="addlink_form">
                 <div class="form-group row">
                       <div class="col-xs-2">
-                        <input class="form-control" placeholder="URL" id="ex1" type="text">
+                        <input class="form-control" placeholder="URL" id="ex1" type="text" name="site_url" id="site_url">
                       </div>
                       <div class="col-xs-3">       
                         <input class="form-control"  placeholder="Nom de l'entreprise " id="ex2" type="text">
@@ -686,13 +437,14 @@
                          <input type="text" class="form-control"  placeholder="Adresse" id="usr">
                     </div>   
                 </div>
-                <button type="submit" name="save_url" class="btn btn-primary">Envoyer</button>
+               
             </form>
+            <button type="button"  class="btn btn-primary" onclick="sendUrl()"> envoyer</button>
           </div>
 
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button type="button"  class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
 
         </div>
@@ -744,7 +496,7 @@
     <!--fin modal Login-->
 
   <!--  Modal Inscription -->
-  <div class="modal" id="inscri">
+    <div class="modal" id="inscri">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
@@ -793,6 +545,33 @@
     <!--fin modal inscription-->
   
     <!-- Footer Section Begin -->
+    <script>
+
+      function sendUrl()
+            {
+                    lien=document.forms["addlink_form"]["site_url"].value;
+               // alert(lien);
+              //var site_url = document.getElementById("site_url").value;
+              // var age = document.getElementById("age").value;
+            
+              $.ajax({
+                type: 'post',
+                url: 'save_url.php',
+                data: {
+                  site_url:lien
+                 // age:age
+                },
+                success: function (response) {
+                  $('#addlink_result"').html("Vos données seront sauvegardées");
+                  alert("succes");
+                }
+              });
+                
+              return false;
+            }
+    </script>
+
+
    <?php require("footer.php"); ?>
     <!-- Footer Section End -->
     <script>
@@ -802,7 +581,7 @@
        
         });
         
-</script>
+    </script>
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>

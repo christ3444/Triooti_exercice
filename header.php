@@ -37,12 +37,12 @@ if(isset($_POST["connexion"])){
 <header class="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-2 col-md-2">
                     <div class="header__logo">
                        <p style="color:green;">272 taches a faire</p>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-9">
+                <div class="col-lg-10 col-md-10">
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
