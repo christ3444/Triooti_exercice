@@ -36,7 +36,7 @@
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><a href="#">Blog</a></li>
+                          
                         </ul>
                         <!-- <ul>
                             <li><a href="#">Sign In</a></li>

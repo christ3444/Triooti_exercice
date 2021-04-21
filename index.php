@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/flaticon.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
@@ -26,10 +25,13 @@
 
   
     <?php
+
      require("conn.php");
 
      if(isset($_POST["logout"]) && isset( $_SESSION["login"])){
-         session_destroy();
+      $_SESSION['login']=="0";
+      session_destroy();
+        
         
      }
     ?>
@@ -38,7 +40,7 @@
 
     <!-- chat et erreur -->
     <div class="fixed-bottom">
-            <button class='btn btn-primary'>chat</button>
+    <a href="https://api.whatsapp.com/send?phone=+228 98 674 198">   <img src="img/wha_icon.png" width="50px" height="50px"></img></a> 
             <button class='btn btn-danger'>signaler une erreur</button>
             
             <?php 
@@ -63,13 +65,15 @@
                    }
                  else {
              
-
+                    
             $nom=$_POST["nom"];
             $prenom=$_POST["prenom"];
             $mail=$_POST["email"];
             $numero=$_POST["numero"];
             $adresse=$_POST["adresse"];
-           
+       
+            //    hash mot de passe
+       
             $pass=$_POST["pass"];
             $sql = "INSERT INTO user (nom,prenom,mail,numero,adresse,pseudo,pass)
                     VALUES ('$nom', '$prenom', '$mail','$numero','$adresse','$pseudo','$pass')";
@@ -106,9 +110,9 @@
                     <div class="hero__text">
                         <div class="section-title">
                             <h2>Gagner de l'argent sur ce site en envoyant des liens de site web des entreprises</h2>
-                            <p>+ 100 entreprises repertorie</p>
+                            <p>+ 100 entreprises repertorie dans tous les secteurs </p>
                         </div>
-                        <div class="hero__search__form">
+                        <!-- <div class="hero__search__form">
                             <form action="#">
                                 <input type="text" placeholder="Rechercher une entreprise">
                                 <div class="select__option">
@@ -131,7 +135,7 @@
                                 </div>
                                 <button type="submit">Chercher</button>
                             </form>
-                        </div>
+                        </div> -->
                         <ul class="hero__categories__tags">
                             <li><a href="#"><img src="img/hero/cat-7.png" width="20px" height="20px"> Agroalimentaire</a></li>
                             <li><a href="#"><img src="img/hero/cat-7.png" width="20px" height="20px"> Commmerce</a></li>
@@ -306,17 +310,26 @@
                                                 <div class="listing__item__text__info__left">
                                                     <!-- <img src="img/hero/cat-7.png" alt=""> -->
                                                     <span class="icon_phone">(+228) 90-09-99-00</span> 
-                                                    <span>Restaurant</span>
+                                                    <span>.......</span>
                                                 </div>
                                                 <div class="listing__item__text__info__right"> <a href="link.html" style="color:green;">Ouvrir le lien</a></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                               
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="listing__item">
+                                        <!-- <div class="listing__item__pic set-bg" data-setbg="img/listing/list-1.jpg">
+                                            <img src="img/listing/list_icon-1.png" alt="">
+                                            <div class="listing__item__pic__tag">Technologieblabla</div>
+                                            <div class="listing__item__pic__btns">
+                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
+                                                <a href="#"><span class="icon_heart_alt"></span></a>
+                                            </div>
+                                        </div> -->
                                         <div class="listing__item__text">
                                             <div class="listing__item__text__inside">
-                                                <h5>Immo House </h5>
+                                                <h5>Apple </h5>
                                                 <div class="listing__item__text__rating">
                                                     <div class="listing__item__rating__star">
                                                         <span class="icon_star"></span>
@@ -326,7 +339,7 @@
                                                         <span class="icon_star-half_alt"></span>
                                                     </div>
                                                     <img src="img/hero/cat-7.png" width="40px" height="40px">
-                                                    <h6>Immobilier</h6>
+                                                    <h6>Technologie</h6>
                                                 </div>
                                                 <ul> 
                                                     
@@ -340,14 +353,103 @@
                                                 <div class="listing__item__text__info__left">
                                                     <!-- <img src="img/hero/cat-7.png" alt=""> -->
                                                     <span class="icon_phone">(+228) 90-09-99-00</span> 
-                                                    <span>Lorem Immobilier</span>
+                                                    <span>.......</span>
                                                 </div>
                                                 <div class="listing__item__text__info__right"> <a href="link.html" style="color:green;">Ouvrir le lien</a></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="immo" role="tabpanel">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="listing__item">
+                                        <!-- <div class="listing__item__pic set-bg" data-setbg="img/listing/list-1.jpg">
+                                            <img src="img/listing/list_icon-1.png" alt="">
+                                            <div class="listing__item__pic__tag">Technologieblabla</div>
+                                            <div class="listing__item__pic__btns">
+                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
+                                                <a href="#"><span class="icon_heart_alt"></span></a>
+                                            </div>
+                                        </div> -->
+                                        <div class="listing__item__text">
+                                            <div class="listing__item__text__inside">
+                                                <h5>Lock Immo </h5>
+                                                <div class="listing__item__text__rating">
+                                                    <div class="listing__item__rating__star">
+                                                        <span class="icon_star"></span>
+                                                        <span class="icon_star"></span>
+                                                        <span class="icon_star"></span>
+                                                        <span class="icon_star"></span>
+                                                        <span class="icon_star-half_alt"></span>
+                                                    </div>
+                                                    <img src="img/hero/cat-7.png" width="40px" height="40px">
+                                                    <h6>Immo</h6>
+                                                </div>
+                                                <ul> 
+                                                    
+                                                     <li>lorem ipsum bla bla boom ipso laco homos  </li>
+                                                    <li>adress : 435 rue de la belle lome </li>
+                                                   
+                                                    <!-- <li><span class="icon_phone"></span> (+228) 90-09-99-00</li> -->
+                                                </ul>
+                                            </div>
+                                            <div class="listing__item__text__info">
+                                                <div class="listing__item__text__info__left">
+                                                    <!-- <img src="img/hero/cat-7.png" alt=""> -->
+                                                    <span class="icon_phone">(+228) 90-09-99-00</span> 
+                                                    <span>.......</span>
+                                                </div>
+                                                <div class="listing__item__text__info__right"> <a href="link.html" style="color:green;">Ouvrir le lien</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="listing__item">
+                                        <!-- <div class="listing__item__pic set-bg" data-setbg="img/listing/list-1.jpg">
+                                            <img src="img/listing/list_icon-1.png" alt="">
+                                            <div class="listing__item__pic__tag">Technologieblabla</div>
+                                            <div class="listing__item__pic__btns">
+                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
+                                                <a href="#"><span class="icon_heart_alt"></span></a>
+                                            </div>
+                                        </div> -->
+                                        <div class="listing__item__text">
+                                            <div class="listing__item__text__inside">
+                                                <h5>grace Immo </h5>
+                                                <div class="listing__item__text__rating">
+                                                    <div class="listing__item__rating__star">
+                                                        <span class="icon_star"></span>
+                                                        <span class="icon_star"></span>
+                                                        <span class="icon_star"></span>
+                                                        <span class="icon_star"></span>
+                                                        <span class="icon_star-half_alt"></span>
+                                                    </div>
+                                                    <img src="img/hero/cat-7.png" width="40px" height="40px">
+                                                    <h6>Immo</h6>
+                                                </div>
+                                                <ul> 
+                                                    
+                                                     <li>lorem ipsum bla bla boom ipso laco homos  </li>
+                                                    <li>adress : 435 rue de la belle lome </li>
+                                                   
+                                                    <!-- <li><span class="icon_phone"></span> (+228) 90-09-99-00</li> -->
+                                                </ul>
+                                            </div>
+                                            <div class="listing__item__text__info">
+                                                <div class="listing__item__text__info__left">
+                                                    <!-- <img src="img/hero/cat-7.png" alt=""> -->
+                                                    <span class="icon_phone">(+228) 90-09-99-00</span> 
+                                                    <span>.......</span>
+                                                </div>
+                                                <div class="listing__item__text__info__right"> <a href="link.html" style="color:green;">Ouvrir le lien</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -360,19 +462,94 @@
    
     <!--  Modal dashboard -->
     <div class="modal" id="dashboard">
+
+    <!-- tache valide -->
+      <?php
+         $pseudo=$_POST["pseudo"];
+         $sql = " SELECT COUNT(url_site) AS `tache_valide`  FROM table_url WHERE jobeur='$pseudo' AND valide=1";
+         $result = $conn->query($sql);
+         $row_array=$result->fetch_array(MYSQLI_ASSOC);
+         $taches_valide= $row_array['tache_valide'];
+      ?>
+    <!-- fin tache valide -->
+ <!-- tache valide -->
+ <?php
+         $pseudo=$_POST["pseudo"];
+         $sql = " SELECT COUNT(url_site) AS `tache_invalide`  FROM table_url WHERE jobeur='$pseudo' AND valide=0";
+         $result = $conn->query($sql);
+         $row_array=$result->fetch_array(MYSQLI_ASSOC);
+         $taches_invalide= $row_array['tache_invalide'];
+      ?>
+    <!-- fin tache valide -->
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Mon compte    
+            <h4 class="modal-title"> 
+            <?php
+            $pseudo=$_POST["pseudo"];
+            $sql2 = "SELECT type_de_compte FROM user  WHERE pseudo='$pseudo'";
+            $result2 = $conn->query($sql2);
+            
+            if ($result2->num_rows > 0) {
+              // output data of each row
+              while($row2 = $result2->fetch_assoc()) {
+                  if($row2['type_de_compte']=='demo'){
+                      echo' <span class="badge badge-info">'.$row2['type_de_compte'].' </span>';
+                  }else{ echo' <span class="badge badge-success">'.$row2['type_de_compte'].' </span>';}
+               
+               
+                }
+            }
+           ?> 
+            
+           Mon compte   
         </h4>
+      
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
           <!-- Modal body -->
           <div class="modal-body">
-            Modal body..
+
+             <div class="card">
+               <div class="card-body">
+                 <h5 class="card-title" style="text-align:center;">Informations personnelles</h5>
+                 <p class="card-text">
+                
+                     Some quick example text to build on the panel title and make up the bulk of the panel's content.</p>
+                 <a class="card-link">Card link</a>
+                 <a class="card-link">Another link</a>
+               </div>
+             </div>
+             <!-- <p style=" border-top-style: solid;border-top-color: #bbb;"></p> -->
+             <div class="card" style="margin-top:5px;" >
+               <div class="card-body">
+                 <h5 class="card-title"  style="text-align:center;">Taches</h5>
+                 <a class="card-link">
+                    <button type="button" class="btn btn-primary">
+                       taches valides <span class="badge badge-light"><?php echo $taches_valide;?></span>
+                    </button>
+                  </a>
+                 <a class="card-link">
+                    <button type="button" class="btn btn-danger">
+                       taches invalides <span class="badge badge-light"><?php echo $taches_invalide;?></span>
+                    </button>
+                  </a>
+                  <a class="card-link">
+                    <button type="button" class="btn btn-success">
+                       remuneration <span class="badge badge-light">X- FCFA</span>
+                    </button>
+                  </a>
+                  <a class="card-link">
+                    <button type="button" class="btn btn-warning">
+                      SE FAIRE PAYER
+                    </button>
+                  </a>
+               </div>
+             </div>
+             
           </div>
 
           <!-- Modal footer -->
@@ -404,46 +581,64 @@
         <div class="modal-content">
 
           <!-- Modal Header -->
-          <div class="modal-header" id="addlink_result">
+          <div class="modal-header" >
             <h4 class="modal-title" >ajouter une entreprise</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
-
           <!-- Modal body -->
           <div class="modal-body">
             <form name="addlink_form">
                 <div class="form-group row">
                       <div class="col-xs-2">
-                        <input class="form-control" placeholder="URL" id="ex1" type="text" name="site_url" id="site_url">
+                        <input class="form-control" placeholder="URL" id="input8" type="text" name="site_url" id="site_url">
                       </div>
                       <div class="col-xs-3">       
-                        <input class="form-control"  placeholder="Nom de l'entreprise " id="ex2" type="text">
+                        <input class="form-control"  placeholder="Nom de l'entreprise " id="input7" name="nom_entre" type="text">
                       </div>
-                      <div class="col-xs-4">                  
-                        <select class="form-control" id="sel1">
-                            <option>Secteur d'activite</option>
-                           <option>Immobilier</option>
-                           <option>Informatique</option>
-                           <option value="">Commerce</option>
-                           <option value="">Agence de securite</option>
-                        </select>
+                      <div class="col-xs-3">                  
+                      <input class="form-control"  placeholder="Type de lien:site web/reseau social" id="input10" name="type_lien" type="text">
                       </div>
                 </div>
                 <div class="form-group  row">
                     <div class="col-xs-3"> 
-                         <input type="number" class="form-control"  placeholder="numero" id="usr">
+                         <input type="text" class="form-control" name="numero" placeholder="numero" id="input1">
                     </div>   
                     <div class="col-xs-3"> 
-                         <input type="text" class="form-control"  placeholder="Adresse" id="usr">
+                         <input type="text" class="form-control" name="adresse" placeholder="Adresse" id="input2">
+                    </div>  
+                    <div class="col-xs-4">                  
+                        <select class="form-control" name="cat_entre" id="input9">
+                            <option  value="">Secteur d'activite</option>
+                           <option>Immobilier</option>
+                           <option value="informatique">Informatique</option>
+                           <option value="commerce">Commerce</option>
+                           <option value="agence de securite">Agence de securite</option>
+                        </select>
+                      </div> 
+                </div>
+                <div class="form-group  row">
+                    <div class="col-xs-3"> 
+                         <input type="text" class="form-control" name="nom_concepteur" placeholder="concepteur du site" id="input3">
+                    </div>   
+                    <div class="col-xs-3"> 
+                         <input type="text" class="form-control" name="numero_concepteur" placeholder="telephone du concepteur" id="input4">
                     </div>   
                 </div>
-               
+                <div class="form-group  row">
+                    <div class="col-xs-3"> 
+                         <input type="text" class="form-control" name="nom_serveur_h" placeholder=" serveur d'hebergement" id="input5">
+                    </div>   
+                    <div class="col-xs-3"> 
+                         <input type="text" class="form-control"  name="nom_serveur_d"placeholder="serveur de noms de domaine" id="input6">
+                    </div>   
+                </div>
             </form>
             <button type="button"  class="btn btn-primary" onclick="sendUrl()"> envoyer</button>
           </div>
 
           <!-- Modal footer -->
           <div class="modal-footer">
+          <div id="addlink_result"></div>
             <button type="button"  class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
 
@@ -525,6 +720,9 @@
                   <input type="text" class="form-control" placeholder="Adresse" id="adresse" name="adresse">
                 </div>
                 <div class="form-group">
+                  <input type="text" class="form-control" placeholder="pays" id="pays" name="pays">
+                </div>
+                <div class="form-group">
                   <input type="number" class="form-control" placeholder="Numero" id="numero" name="numero">
                 </div>
                 <div class="form-group">
@@ -549,21 +747,35 @@
 
       function sendUrl()
             {
-                    lien=document.forms["addlink_form"]["site_url"].value;
-               // alert(lien);
-              //var site_url = document.getElementById("site_url").value;
-              // var age = document.getElementById("age").value;
-            
+           //alert("hello");
+ 
               $.ajax({
                 type: 'post',
                 url: 'save_url.php',
                 data: {
-                  site_url:lien
-                 // age:age
+                   site_url:document.forms["addlink_form"]["site_url"].value,
+                   nom_entre:document.forms["addlink_form"]["nom_entre"].value,
+                   numero_entre:document.forms["addlink_form"]["numero"].value,
+                   cat_entre:document.forms["addlink_form"]["cat_entre"].value,
+                   adresse:document.forms["addlink_form"]["adresse"].value,
+                   nom_concepteur:document.forms["addlink_form"]["nom_concepteur"].value,
+                   numero_concepteur:document.forms["addlink_form"]["numero_concepteur"].value,
+                   nom_serveur_h:document.forms["addlink_form"]["nom_serveur_h"].value,
+                   nom_serveur_d:document.forms["addlink_form"]["nom_serveur_h"].value
+ 
                 },
                 success: function (response) {
-                  $('#addlink_result"').html("Vos données seront sauvegardées");
-                  alert("succes");
+                  $('#addlink_result').html(response);
+                  document.getElementById('input1').value="";
+                  document.getElementById('input2').value="";
+                  document.getElementById('input3').value="";
+                  document.getElementById('input4').value="";
+                  document.getElementById('input5').value="";
+                  document.getElementById('input6').value="";
+                  document.getElementById('input7').value="";
+                  document.getElementById('input8').value="";
+                  document.getElementById('input9').value="";
+                  //alert("succes");
                 }
               });
                 

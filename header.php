@@ -1,8 +1,16 @@
 
+<header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <div class="header__logo">
+                       <p style="color:green;">272 taches a faire</p>
+                       
 <?php 
 
 if(isset($_POST["connexion"])){
-
+    session_start();
+    $_SESSION['login']="1";
     $pseudo=$_POST["pseudo"];
     $pass=$_POST["pass"];
 
@@ -13,33 +21,33 @@ if(isset($_POST["connexion"])){
         while($row = $result->fetch_assoc()) {
 
            if($row["pass"]==$pass){ 
-            session_start();
+            
             $_SESSION["pseudo"] =$row["pseudo"];
             $_SESSION["pass"] = $row["pass"];
             $_SESSION["login"]=1;
             }
-          }
-    }else{
+            else{
         echo ' 
-        <div class="container">
-            <div class="col-md-4">
+       
                 <div class="alert alert-danger alert-dismissible">
                      <button type="button" class="close" data-dismiss="alert">×</button>
                    pseudo ou mot de passe inccorecte
                      <button  type="button" class="btn btn-secondary" data-toggle="modal" data-dismiss="modal" data-target="#login"> réessayer </button>
                 </div>
-            </div>    
-        </div>';
+          ';
+    }
+          }
+    }else{
+        echo ' 
+                <div class="alert alert-danger alert-dismissible">
+                     <button type="button" class="close" data-dismiss="alert">×</button>
+                   pseudo ou mot de passe inccorecte
+                     <button  type="button" class="btn btn-secondary" data-toggle="modal" data-dismiss="modal" data-target="#login"> réessayer </button>
+                </div>';
     }
 }
 
 ?>
-<header class="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-2 col-md-2">
-                    <div class="header__logo">
-                       <p style="color:green;">272 taches a faire</p>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-10">
@@ -65,12 +73,11 @@ if(isset($_POST["connexion"])){
                         <div class="header__menu__right">
                             <a href="#" class="primary-btn" data-toggle="modal" data-target="#addlink"><i class="fa fa-plus"></i>Ajouter un lien</a>
                            <?php 
-                                  if(isset($_SESSION["login"]) && $_SESSION["login"]==1) {
-                                    echo '<a style="color:white;">'. $_SESSION["pseudo"].'</a>' ; 
+                                  if(isset($_SESSION["pseudo"]) && $_SESSION["pseudo"]!="") {
+                                    echo '<button type="button" class="btn btn-lg btn-dark" style="color:white;" data-toggle="modal" data-target="#dashboard">'. $_SESSION["pseudo"].'</button>' ; 
                                  } else{?><button type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#login">LogIn</button>
                                   <?php } ;
                             ?> 
-                            <a href="#" class="login-btn" data-toggle="modal" data-target="#dashboard"><i class="fa fa-user"></i></a>
                         </div>
                     </div>
                 </div>
@@ -98,12 +105,12 @@ if(isset($_POST["connexion"])){
                             <li><a href="#" role="menuitem">Contact</a></li> -->
                             <a href="#" class="primary-btn" data-toggle="modal" data-target="#addlink"><i class="fa fa-plus"></i>Ajouter un lien</a>
                             <?php 
-                            if(isset($_SESSION["login"]) &&$_SESSION["login"]==1) {
-                                echo '<a style="color:white;">'. $_SESSION["pseudo"].'</a>' ; 
+                            if(isset($_SESSION["pseudo"]) && $_SESSION["pseudo"]!="") {
+                                echo '<button type="button" class="btn btn-lg btn-dark" style="color:white;" data-toggle="modal" data-target="#dashboard">'. $_SESSION["pseudo"].'</button>' ; 
                                  } else{?> <button type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#login">LogIn</button>
                                   <?php } ;
                             ?> 
-                                <a href="#" type="button" class="login-btn" data-toggle="modal" data-target="#dashboard" ><i class="fa fa-user"></i></a>
+                               
         <!-- 
                         </ul> -->
                     </nav>
